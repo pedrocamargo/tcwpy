@@ -42,8 +42,7 @@ class TCWMtx:
 
     def load(self, filename, justcores=None, verbose=False, null_is_zero=True):
         # We load the DLL and initiate it
-        #tcw = cdll.LoadLibrary('C:\\Program Files\\TransCAD 6.0\\CaliperMtx.dll')
-        tcw = cdll.LoadLibrary('E:\\CaliperMtx.dll')
+        tcw = cdll.LoadLibrary('C:\\Program Files\\TransCAD 6.0\\CaliperMtx.dll')
         
         initdll = ctypes.c_short(0)
         idll = ctypes.pointer(initdll)
