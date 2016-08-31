@@ -18,7 +18,9 @@ Usage example (Matrix)
 from tcwpy import TCWMtx
 
 matrix = 'path+matrix_name.mtx'
+
 cores_to_load = ['core1', 'core2']
+
 mymatrix = TCWMtx()
 
 #### Loading all matrix cores
@@ -29,6 +31,7 @@ mymatrix.load(matrix,  justcores=cores_to_load, verbose=True)
 
 #### Printing names of all loaded cores
 for q in mymatrix.matrix.keys():
+
     print q
 
 #### exports matrix to csv file
@@ -42,6 +45,7 @@ mymatrix.value(core, i, j)
 
 #### The matrix indices can be accesed through
 matrix.RHash[:] #### for rows
+
 matrix.CHash[:] #### for columns
 
   
@@ -53,6 +57,7 @@ Usage example (binary)
 from tcwpy import DataBintx
 
 f = DataBin()
+
 f.load(path+name_of_the_file.bin)
 
 #### prints all columns in the bin

@@ -51,6 +51,7 @@ class TCWMtx:
         mat = tcw.MATRIX_LoadFromFile(filename, True)
 
         self.rows = tcw.MATRIX_GetBaseNRows(mat)
+        self.columns = tcw.MATRIX_GetBaseNCols(mat)
         self.type = tcw.MATRIX_GetDataType(mat)
         self.indexcount = (tcw.MATRIX_GetNIndices(mat, 0), tcw.MATRIX_GetNIndices(mat, 1))
         self.cores = tcw.MATRIX_GetNCores(mat)
