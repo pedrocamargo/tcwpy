@@ -43,7 +43,7 @@ class TCWMtx:
     def load(self, filename, justcores=None, verbose=False, null_is_zero=True):
         # We load the DLL and initiate it
         tcw = cdll.LoadLibrary(dll)
-        
+
         initdll = ctypes.c_short(0)
         idll = ctypes.pointer(initdll)
         tcw.InitMatDLL(idll)
